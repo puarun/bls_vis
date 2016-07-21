@@ -19,9 +19,7 @@ shinyUI(fluidPage(
       br(), 
       plotOutput("map"),
       br(),
-      p("This app was created and adapted using lesson 5 in", 
-        img(src = "bigorb.png", height = 40, width = 40),
-        span("RStudio's", style = "color:blue"), "Shiny tutorial")
+      p(cat("This app was modified from RStudio's Shiny tutorial", "\nAuthor: Arun Palghat Udayashankar"))
     )
   )
 ))
