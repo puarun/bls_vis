@@ -10,6 +10,10 @@ shinyServer(function(input, output) {
   #  1) It is "reactive" and therefore should re-execute automatically
   #     when inputs change
   #  2) Its output type is a plot
+  output$text1<-renderText({
+    tp=input$bins
+    paste(events$event[events$year==tp])
+  })
   
   output$distPlot <- renderPlot({
     tp = input$bins
