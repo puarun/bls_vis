@@ -1,25 +1,24 @@
+library(shiny)
+
+# Define UI for application that draws a histogram
 shinyUI(fluidPage(
-  titlePanel(
-    h1("2010 Census Visualization")
-  ), 
+  
+  # Application title
+  titlePanel("US economy timeline"),
+  
+  # Sidebar with a slider input for the number of bins
   sidebarLayout(
     sidebarPanel(
-      helpText("Create demographic maps:"), 
-      selectInput("select", label = h4("Choose a variable to display"), 
-                  choices = list("Percent White", "Percent Black",
-                                 "Percent Hispanic", "Percent Asian"), 
-                  selected = "Percent White"), 
-      sliderInput("slider", label = h4("Range of interest:"), 
-                  min = 0, max = 100, value = c(0,100))
+      sliderInput("bins",
+                  "Choose year:",
+                  min = 2001,
+                  max = 2015,
+                  value = 2015)
     ),
+    
+    # Show a plot of the generated distribution
     mainPanel(
-      textOutput("text1"), 
-      br(),
-      textOutput("text2"), 
-      br(), 
-      plotOutput("map"),
-      br(),
-      p(cat("This app was modified from RStudio's Shiny tutorial", "\nAuthor: Arun Palghat Udayashankar"))
+      plotOutput("distPlot")
     )
   )
 ))
