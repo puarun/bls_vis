@@ -22,5 +22,5 @@ data(county.fips)
 events<-data.frame(year=c(2001:2015))
 events$event<- c('9/11 hits US','Afghan war','Iraq war','Asian Tsunami','Political changes in Europe',
                  'Dems win midterm','Bush passes reforms and increases ground troops','Great recession',
-                 'Obama takes office','Haiti earthquake','Arab spring','Obama reelected',
+                 'Rcession worsens','Haiti earthquake','Arab spring','Obama reelected',
                  'Syrian civil war','Ukraine crisis','Climate change deal')
